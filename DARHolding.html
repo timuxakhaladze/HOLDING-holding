@@ -12,7 +12,7 @@
 
     * { margin:0; padding:0; box-sizing:border-box; }
     :root {
-        --modus-red:#b11217; --dark-gray:#2b2b2b; --medium-gray:#666;
+        --modus-red:#1b0361; --dark-gray:#2b2b2b; --medium-gray:#666;
         --light-gray:#f4f6f8; --border-gray:#e0e0e0;
     }
     body { font-family:"Segoe UI", Arial, Helvetica, sans-serif; background-color:var(--light-gray); color:var(--dark-gray); line-height:1.7;}
@@ -32,6 +32,8 @@
     a { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--modus-red); color:#fff; text-decoration:none; font-size:14px; font-weight:600; border-radius:4px; transition:0.3s; }
     a:hover { background:#8f0e12; transform:translateY(-2px);}
     footer { margin-top:40px; padding-top:20px; border-top:2px solid var(--border-gray); text-align:center; font-size:14px; color:var(--medium-gray);}
+
+    
     
     /* LANGUAGE SWITCHER */
     .lang-switcher { text-align:right; margin-bottom:20px; }
@@ -53,7 +55,12 @@
         <button class="lang-btn" data-lang="en">English</button>
         <button class="lang-btn" data-lang="ru">Русский</button>
     </div>
-
+    <div style="text-align:right; margin-bottom:20px;">
+        <address data-ka="მისამართი: ბათუმი,პუშკინის 18" data-en="Address: Batumi, Georgia" data-ru="Адрес: Батуми, Грузия">
+            მისამართი: ბათუმი,პუშკინის 18 <br>
+            t.akhaladze@modus.com.ge
+        </address>
+    </div>
     <!-- HEADER -->
     <header class="company-header">
         <img src="https://modus.ge/assets/imgs/modus_ka.png" alt="MODUS LLC Logo" class="logo">
@@ -122,7 +129,7 @@
             მეტი ინფორმაცია DARCAPITAL-ის შესახებ
         </a>
     </section>
-
+ </main>
     <!-- FOOTER -->
     <footer>
         <p data-ka="© 2024 MODUS LLC. All rights reserved | TEMO AKHALADZE"
@@ -132,7 +139,7 @@
         </p>
     </footer>
 
-</main>
+
 
 <script>
     const langButtons = document.querySelectorAll('.lang-btn');
