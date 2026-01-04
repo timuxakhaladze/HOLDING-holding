@@ -1,11 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MODUS Holding</title>
+
+<style>
+    /* =========================
+       MODUS STYLE
+       ========================= */
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+        --modus-red:#b11217; --dark-gray:#2b2b2b; --medium-gray:#666;
+        --light-gray:#f4f6f8; --border-gray:#e0e0e0;
+    }
+    body { font-family:"Segoe UI", Arial, Helvetica, sans-serif; background-color:var(--light-gray); color:var(--dark-gray); line-height:1.7;}
+    main { max-width:1100px; margin:50px auto; padding:50px; background:#fff; border-radius:10px; box-shadow:0 12px 30px rgba(0,0,0,0.08); }
+    .company-header { display:flex; align-items:center; gap:30px; padding-bottom:30px; margin-bottom:40px; border-bottom:3px solid var(--modus-red); }
+    .logo { width:120px; height:auto; }
+    .company-title h1 { font-size:36px; color:var(--modus-red); margin-bottom:6px; letter-spacing:1px; }
+    .company-title p { font-size:16px; color:var(--medium-gray); max-width:700px; }
+    section { padding:35px 0; border-bottom:1px solid var(--border-gray); }
+    section:last-of-type { border-bottom:none; }
+    h3 { font-size:24px; margin-bottom:10px; color:var(--dark-gray); position:relative; padding-left:15px; }
+    h3::before { content:""; position:absolute; left:0; top:4px; height:80%; width:4px; background:var(--modus-red); }
+    p, strong { margin-bottom:15px; color:var(--medium-gray);}
+    strong { color:var(--dark-gray); font-weight:600;}
+    ul { margin:20px 0 20px 25px; }
+    li { margin-bottom:10px; }
+    a { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--modus-red); color:#fff; text-decoration:none; font-size:14px; font-weight:600; border-radius:4px; transition:0.3s; }
+    a:hover { background:#8f0e12; transform:translateY(-2px);}
+    footer { margin-top:40px; padding-top:20px; border-top:2px solid var(--border-gray); text-align:center; font-size:14px; color:var(--medium-gray);}
     
+    /* LANGUAGE SWITCHER */
+    .lang-switcher { text-align:right; margin-bottom:20px; }
+    .lang-switcher button { margin-left:5px; padding:5px 12px; font-size:14px; cursor:pointer; border:none; border-radius:4px; background:#ddd; transition:0.2s; }
+    .lang-switcher button.active, .lang-switcher button:hover { background:var(--modus-red); color:#fff; }
+
+    @media(max-width:768px){ main{margin:20px;padding:30px 20px;} .company-header{flex-direction:column;text-align:center;} .logo{width:100px;} .company-title h1{font-size:28px;} h3{font-size:20px;} }
+</style>
+</head>
+
+<body>              
+
+<main>
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switcher">
+        <span>ენა:</span>
+        <button class="lang-btn active" data-lang="ka">ქართული</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ru">Русский</button>
+    </div>
+
+    <!-- HEADER -->
+    <header class="company-header">
+        <img src="https://modus.ge/assets/imgs/modus_ka.png" alt="MODUS LLC Logo" class="logo">
+        <div class="company-title">
+            <h1 data-ka="MODUS LLC" data-en="MODUS LLC" data-ru="MODUS LLC">MODUS LLC</h1>
+            <p data-ka="სამშენებლო და სარემონტო მასალების ჰიპერმარკეტების ერთ-ერთი ლიდერი საქართველოში"
+               data-en="One of the leading construction and building materials hypermarkets in Georgia"
+               data-ru="Один из ведущих гипермаркетов строительных и ремонтных материалов в Грузии">
+                სამშენებლო და სარემონტო მასალების ჰიპერმარკეტების ერთ-ერთი ლიდერი საქართველოში
+            </p>
+        </div>
+    </header>
+
+    <!-- MODUS -->
+    <section>
+        <h3 data-ka="დღეისათვის MODUS ოპერირებს:" data-en="Currently MODUS operates:" data-ru="В настоящее время MODUS работает:">
+            დღეისათვის MODUS ოპერირებს:
+        </h3>
+        <ul>
+            <li data-ka="<strong>ბათუმი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 14,000 მ² სავაჭრო ფართით (საწყობების გარეშე)"
+                data-en="<strong>Batumi</strong> – 2 hypermarkets, approx. 14,000 m² retail area (without warehouses)"
+                data-ru="<strong>Батуми</strong> – 2 гипермаркета, около 14,000 м² торговой площади (без складов)">
+                <strong>ბათუმი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 14,000 მ² სავაჭრო ფართით (საწყობების გარეშე)
+            </li>
+            <li data-ka="<strong>თბილისი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 19,000 მ² სავაჭრო ფართით (საწყობების გარეშე)"
+                data-en="<strong>Tbilisi</strong> – 2 hypermarkets, approx. 19,000 m² retail area (without warehouses)"
+                data-ru="<strong>Тбилиси</strong> – 2 гипермаркета, около 19,000 м² торговой площади (без складов)">
+                <strong>თბილისი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 19,000 მ² სავაჭრო ფართით (საწყობების გარეშე)
+            </li>
+        </ul>
+        <p data-ka="გარდა საკუთარი ობიექტებისა, კომპანიას ჰყავს დილერები საქართველოს ყველა დიდ ქალაქში, რაც უზრუნველყოფს ფართო ბაზრის დაფარვას."
+           data-en="In addition to its own facilities, the company has dealers in all major cities of Georgia, ensuring wide market coverage."
+           data-ru="Кроме собственных объектов, компания имеет дилеров во всех крупных городах Грузии, обеспечивая широкое покрытие рынка.">
+            გარდა საკუთარი ობიექტებისა, კომპანიას ჰყავს დილერები საქართველოს ყველა დიდ ქალაქში, რაც უზრუნველყოფს ფართო ბაზრის დაფარვას.
+        </p>
+    </section>
+
+    <!-- DARBUILDING -->
+    <section>
+        <h3 data-ka="DARBUILDING" data-en="DARBUILDING" data-ru="DARBUILDING">DARBUILDING</h3>
+        <p data-ka="<strong>მშენებლობა და დეველოპმენტი</strong>" data-en="<strong>Construction and Development</strong>" data-ru="<strong>Строительство и девелопмент</strong>">
+            <strong>მშენებლობა და დეველოპმენტი</strong>
+        </p>
+        <p data-ka="<strong>MODUS</strong>ი აქტიურად არის ჩართული სამშენებლო საქმიანობაში შვილობილი კომპანიის <strong>DARBUILDING</strong> მეშვეობით, რომელიც ახორციელებს საცხოვრებელი და კომერციული პროექტების განვითარებას."
+           data-en="<strong>MODUS</strong> is actively involved in construction through its subsidiary <strong>DARBUILDING</strong>, which develops residential and commercial projects."
+           data-ru="<strong>MODUS</strong> активно участвует в строительной деятельности через свою дочернюю компанию <strong>DARBUILDING</strong>, которая реализует жилые и коммерческие проекты.">
+            <strong>MODUS</strong>ი აქტიურად არის ჩართული სამშენებლო საქმიანობაში შვილობილი კომპანიის <strong>DARBUILDING</strong> მეშვეობით, რომელიც ახორციელებს საცხოვრებელი და კომერციული პროექტების განვითარებას.
+        </p>
+        <a href="https://www.darbuilding.ge" target="_blank" data-ka="მეტი ინფორმაცია DARBUILDING-ის შესახებ" data-en="More about DARBUILDING" data-ru="Подробнее о DARBUILDING">
+            მეტი ინფორმაცია DARBUILDING-ის შესახებ
+        </a>
+    </section>
+
+    <!-- DARCAPITAL -->
+    <section>
+        <h3 data-ka="DARCAPITAL" data-en="DARCAPITAL" data-ru="DARCAPITAL">DARCAPITAL</h3>
+        <p data-ka="<strong>წარმოება</strong>" data-en="<strong>Production</strong>" data-ru="<strong>Производство</strong>">
+            <strong>წარმოება</strong>
+        </p>
+        <p data-ka="კომპანია ფლობს საკუთარ საწარმოო ხაზებს ბრენდის DARCAPITAL ქვეშ, რომელიც აწარმოებს მაღალი ხარისხის სამშენებლო პროდუქტებს და პასუხობს თანამედროვე ბაზრის მოთხოვნებს."
+           data-en="The company operates its own production lines under the DARCAPITAL brand, manufacturing high-quality construction products meeting modern market requirements."
+           data-ru="Компания управляет собственными производственными линиями под брендом DARCAPITAL, производя высококачественные строительные продукты, соответствующие современным требованиям рынка.">
+            კომპანია ფლობს საკუთარ საწარმოო ხაზებს ბრენდის DARCAPITAL ქვეშ, რომელიც აწარმოებს მაღალი ხარისხის სამშენებლო პროდუქტებს და პასუხობს თანამედროვე ბაზრის მოთხოვნებს.
+        </p>
+        <a href="https://www.darcapital.ge" target="_blank" data-ka="მეტი ინფორმაცია DARCAPITAL-ის შესახებ" data-en="More about DARCAPITAL" data-ru="Подробнее о DARCAPITAL">
+            მეტი ინფორმაცია DARCAPITAL-ის შესახებ
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p data-ka="© 2024 MODUS LLC. All rights reserved | TEMO AKHALADZE"
+           data-en="© 2024 MODUS LLC. All rights reserved | TEMO AKHALADZE"
+           data-ru="© 2024 MODUS LLC. Все права защищены | TEMO AKHALADZE">
+            © 2024 MODUS LLC. All rights reserved | TEMO AKHALADZE
+        </p>
+    </footer>
+
+</main>
+
+<script>
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const translatable = document.querySelectorAll('[data-ka]');
+
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+
+            // set active class
+            langButtons.forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // update text
+            translatable.forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
