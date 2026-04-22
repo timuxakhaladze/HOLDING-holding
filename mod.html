@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODUS Holding | Premium Experience</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+GO:wght@300;400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1b0361;
+            --accent: #e63946;
+            --text-dark: #1a1a1a;
+            --text-light: #555;
+            --glass: rgba(255, 255, 255, 0.96);
+            --gradient: linear-gradient(135deg, #1b0361 0%, #4834d4 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Fira GO', 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: url('https://www.modus.ge/assets/imgs/Modus.jpg') center/cover fixed no-repeat;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(240, 242, 245, 0.85);
+            z-index: -1;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--glass);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            background: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        /* Address Box */
+        .address-box {
+            text-align: right;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        /* Header */
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            margin-bottom: 30px;
+        }
+
+        .logo { width: 130px; transition: 0.3s; }
+
+        .company-title h1 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        /* Sections */
+        section { padding: 30px 0; border-bottom: 1px solid #eee; }
+        section:last-child { border-bottom: none; }
+
+        .section-title {
+            font-size: 22px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul { list-style: none; margin: 15px 0; }
+        li {
+            padding: 12px;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Brand Cards with Images */
+        .brand-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 25px;
+            margin-top: 15px;
+            align-items: center;
+        }
+
+        .brand-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        
+        }
+     
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 10px 22px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+       
+
+        .btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+        footer { text-align: center; padding-top: 30px; color: #999; font-size: 13px; }
+
+        @media (max-width: 768px) {
+            .company-header { flex-direction: column; text-align: center; }
+            .brand-grid { grid-template-columns: 1fr; }
+           
+            main { margin: 10px; padding: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<main data-aos="fade-up">
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ka">ქართული</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="ru">Русский</button>
+    </div>
+
+    <div class="address-box">
+        <p class="translatable" 
+           data-ka="მისამართი: ბათუმი, პუშკინის 18" 
+           data-en="Address: 18 Pushkin St, Batumi" 
+           data-ru="Адрес: Батуми, ул. Пушкина 18">
+           მისამართი: ბათუმი, პუშკინის 18
+        </p>
+        <p><strong>t.akhaladze@modus.com.ge</strong></p>
+    </div>
+
+    <header class="company-header">
+        <img src="https://modus.ge/assets/imgs/modus_ka.png" class="logo">
+        <div class="company-title">
+            <h1>MODUS LLC</h1>
+            <p class="translatable"
+               data-ka="სამშენებლო და სარემონტო მასალების ჰიპერმარკეტების ერთ-ერთი ლიდერი საქართველოში"
+               data-en="One of the leading construction and building materials hypermarkets in Georgia"
+               data-ru="Один из ведущих гипермаркетов строительных и ремонтных материалов в Грузии">
+               სამშენებლო და სარემონტო მასალების ჰიპერმარკეტების ერთ-ერთი ლიდერი საქართველოში
+            </p>
+        </div>
+    </header>
+
+    <section>
+        <h3 class="section-title translatable" 
+            data-ka="<i class='fas fa-store'></i> დღეისათვის MODUS ოპერირებს:" 
+            data-en="<i class='fas fa-store'></i> Currently MODUS operates:" 
+            data-ru="<i class='fas fa-store'></i> В настоящее время MODUS работает:">
+            <i class='fas fa-store'></i> დღეისათვის MODUS ოპერირებს:
+        </h3>
+        <ul>
+            <li class="translatable"
+                data-ka="<strong>ბათუმი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 14,000 მ²"
+                data-en="<strong>Batumi</strong> – 2 hypermarkets, approx. 14,000 m²"
+                data-ru="<strong>Батуми</strong> – 2 гипермаркета, около 14,000 м²">
+                <strong>ბათუმი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 14,000 მ²
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepPWXOGV2EW7XRbTTjDiR0ARVgXHGdNilW2xP0Zth7N1gIqPJ35BOvE-_Q2_mmtLNVhSZqx_FB0WtN6XcLspEbGXDZLZSPxJd69tF64Pe_pATI-LOhU3KOCqg0gp3uMcoGrfaRokfSX7rs=s680-w680-h510-rw" class="brand-image">
+            </li>
+            <li class="translatable"
+                data-ka="<strong>თბილისი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 19,000 მ²"
+                data-en="<strong>Tbilisi</strong> – 2 hypermarkets, approx. 19,000 m²"
+                data-ru="<strong>Тбилиси</strong> – 2 гипермаркета, около 19,000 м²">
+                <strong>თბილისი</strong> – 2 ჰიპერმარკეტი, დაახლოებით 19,000 მ²
+                <img src="https://www.modus.ge/assets/imgs/Modus.jpg" class="brand-image">
+            </li>
+        </ul>
+        <p class="translatable"
+           data-ka="კომპანიას ჰყავს დილერები საქართველოს ყველა დიდ ქალაქში."
+           data-en="The company has dealers in all major cities of Georgia."
+           data-ru="Компания имеет дилеров во всех крупных городах Грузии.">
+           კომპანიას ჰყავს დილერები საქართველოს ყველა დიდ ქალაქში.
+        </p>
+        <a class="btn" href="https://modus.com.ge" target="_blank"><i class="fas fa-external-link-alt"></i> Website</a>
+    </section>
+
+    <section data-aos="fade-right">
+        <h3 class="section-title"><i class="fas fa-building"></i> DARBUILDING</h3>
+        <div class="brand-grid">
+            <img src="https://darbuilding.ge/img/dar.webp" class="brand-image">
+            <div>
+                <p class="translatable" 
+                   data-ka="<strong>მშენებლობა და დეველოპმენტი</strong>" 
+                   data-en="<strong>Construction and Development</strong>" 
+                   data-ru="<strong>Строительство и девелопмент</strong>">
+                   <strong>მშენებლობა და დეველოპმენტი</strong>
+                </p>
+                <p class="translatable"
+                   data-ka="MODUS-ი აქტიურად არის ჩართული სამშენებლო საქმიანობაში DARBUILDING-ის მეშვეობით."
+                   data-en="MODUS is actively involved in construction through DARBUILDING."
+                   data-ru="MODUS активно участвует в строительстве через DARBUILDING.">
+                   MODUS-ი აქტიურად არის ჩართული სამშენებლო საქმიანობაში...
+                </p>
+                <a class="btn" href="https://www.darbuilding.ge" target="_blank"><i class="fas fa-info-circle"></i> Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-left">
+        <h3 class="section-title"><i class="fas fa-industry"></i> DARCAPITAL</h3>
+        <div class="brand-grid">
+            <img src="http://darcapital.ge/images/portfolio/thumb1.jpg" class="brand-image">
+            <div>
+                <p class="translatable" 
+                   data-ka="<strong>წარმოება</strong>" 
+                   data-en="<strong>Production</strong>" 
+                   data-ru="<strong>Производство</strong>">
+                   <strong>წარმოება</strong>
+                </p>
+                <p class="translatable"
+                   data-ka="კომპანია ფლობს საკუთარ საწარმოო ხაზებს DARCAPITAL ბრენდის ქვეშ."
+                   data-en="The company operates its own production lines under the DARCAPITAL brand."
+                   data-ru="Компания управляет собственными производственными линиями под брендом DARCAPITAL.">
+                   კომპანია ფლობს საკუთარ საწარმოო ხაზებს...
+                </p>
+                <a class="btn" href="http://darcapital.ge/" target="_blank"><i class="fas fa-info-circle"></i> Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MODUS LLC</p>
+    </footer>
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
+
+    const buttons = document.querySelectorAll('.lang-btn');
+    const translatableElements = document.querySelectorAll('.translatable');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // აქტიური ღილაკის შეცვლა
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const lang = btn.getAttribute('data-lang');
+
+            // ტექსტების შეცვლა
+            translatableElements.forEach(el => {
+                const newText = el.getAttribute(`data-${lang}`);
+                if (newText) {
+                    el.innerHTML = newText;
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
